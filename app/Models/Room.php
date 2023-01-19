@@ -10,13 +10,14 @@ class Room extends Model
     use HasFactory;
     protected $fillable = [
         'name',
+        'user_id',
         'room_color',
         'occupants_gender',
         'capacity',
     ];
 
-    public function users()
+    public function user()
     {
-        return $this->hasMany(User::class);
+        return $this->belongsTo(User::class);
     }
 }

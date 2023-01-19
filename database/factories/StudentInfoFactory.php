@@ -15,6 +15,7 @@ class StudentInfoFactory extends Factory
     {
         return [
             'group_id' => $this->faker->numberBetween(1, 3),
+            'user_id' => $this->faker->numberBetween(1, 3),
         ];
     }
 }

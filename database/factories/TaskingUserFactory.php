@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class UserTaskingFactory extends Factory
+class TaskingUserFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,7 +14,8 @@ class UserTaskingFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'no_task'=> $this->faker->numberBetween(1, 3),
+
         ];
     }
 }

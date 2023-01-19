@@ -15,6 +15,7 @@ class RoomFactory extends Factory
     {
         return [
             'name' => $this->faker->name,
+            'user_id' => $this->faker->randomDigit(1, 5),
             'room_color' => $this->faker->hexcolor,
             'occupants_gender' => $this->faker->randomElement(['male', 'female']),
             'capacity' => $this->faker->randomDigitNotNull,

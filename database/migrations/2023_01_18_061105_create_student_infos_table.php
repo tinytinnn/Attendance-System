@@ -14,8 +14,8 @@ class CreateStudentInfosTable extends Migration
     public function up()
     {
         Schema::create('student_infos', function (Blueprint $table) {
-            // $table->id();
-            $table->id('user_id');
+            $table->id();
+            $table->integer('user_id')->unsigned();
             $table->integer('group_id')->unsigned();
             $table->timestamps();
         });

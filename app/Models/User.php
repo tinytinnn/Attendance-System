@@ -53,9 +53,9 @@ class User extends Authenticatable
     }
     public function room()
     {
-        return $this->belongsTo(Room::class);
+        return $this->hasMany(Room::class);
     }
-   
+
     // public function orders()
     // {
     //     return $this->belongsToMany(Order::class);

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateConsequencesTable extends Migration
+class CreateTaskingUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateConsequencesTable extends Migration
      */
     public function up()
     {
-        Schema::create('consequences', function (Blueprint $table) {
-            $table->id('consequence_id');
-            $table->string('consequence_name');
-            $table->integer('days_to_complete')->unsigned();
-            $table->string('Remarks');
+        Schema::create('tasking_user', function (Blueprint $table) {
+            $table->id();
+            $table->integer('user_id')->unsigned();
+            $table->integer('tasking_id')->unsigned();
+            $table->integer('no_task');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateConsequencesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('consequences');
+        Schema::dropIfExists('tasking_user');
     }
 }
