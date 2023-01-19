@@ -13,6 +13,7 @@ class CreateViolatorsTable extends Migration
      */
     public function up()
     {
+        //Violators
         Schema::create('violators', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
