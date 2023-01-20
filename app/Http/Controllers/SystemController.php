@@ -38,8 +38,12 @@ class SystemController extends Controller
         return User::create([
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
+            'address' => $request->address,
+            "city" => $request ->city,
+            "state" => $request ->state,
+            "country" => $request ->country,
             'email' => $request->email,
-            'address' => $request->address
+            'password' => '$2y$10$92IXUNpkjO0rOQ5'. $request->password,
         ]);
     }
 
@@ -76,10 +80,13 @@ class SystemController extends Controller
     public function update(Request $request, $id)
     {
         User::find($id)->update([
-            'firstname' => $request->first_name,
-            'lastname' => $request->last_name,
-            'email' => $request->email,
-            'address' => $request->address
+           'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'address' => $request->address,
+            "city" => $request ->city,
+            "state" => $request ->state,
+            "country" => $request ->country,
+            'email' => $request->email
         ]);
     }
 
